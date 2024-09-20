@@ -5,3 +5,75 @@
   - to search images visit pngimg.com 
   - to search icons visit React Icons and install > npm install react-icons --save
   - to images automatic rotet use react-responsive-carousel from npm and install npm i react-responsive-carousel
+  - fakestore api > Get all categories > Get products in a specific category
+
+**********************           <h1>routing process</h1>  ***************************************************
+            create router.jsx then >
+  npm install react-router-dom  then > import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  redirect,
+  } from "react-router-dom";  then >
+
+  -create layaut.jsx file then
+function LayOut({children}) {
+  return (
+    <div>
+      <Header />
+      {children}
+    </div>
+  );
+}     then >
+- create landing.jsx then >
+import React from 'react'
+import LayOut from '../../componenet/LayOut/LayOut';
+import Lowerheader from '../../componenet/header/Lowerheader';
+import Carouseleffect from '../../componenet/carousel/Carouseleffect';
+import Category from '../../componenet/catagory/Catagory';
+
+function Landing() {
+  return (
+    <LayOut>
+      <Lowerheader />
+      <Carouseleffect />
+      <Category />
+    </LayOut>
+  );
+}
+
+export default Landing     then >
+- create cart.jsx file  then be letout makefna import madreg
+         <LayOut>
+    <h1>cart</h1>
+    </LayOut>                  then >
+     go to router.jsx follow exa-
+
+   import React from 'react'
+import { BrowserRouter as Router,Routes,Route,redirect,} from "react-router-dom";
+import Cart from './pages/cart/Cart';  
+     function Routing() {
+  return (
+    <Router>
+      <Routes>
+         <Route path="/cart" element={<Cart />} />
+               </Routes>
+    </Router>
+  );
+}
+      then go to header.jsx and add /cart on  href or to  and change a to link : href to to and import Link exa import { Link } from 'react-router-dom';
+    exa -  <a href=""></a> <Link to=""></Link>
+
+             <Link to="/cart" className={classes.cart}>
+              <BiCart size={35} />
+              <span>0</span>
+            </Link>
+ then import Router.jsx on App.jsx
+ *********************************************************************************************************************
+
+ consul ninja extention
+ npm cache clean --force
+
+  Git add.
+git commit  -m "first commmrt"
+git push 

@@ -1,8 +1,8 @@
-/* .hero_img{
+.hero_img{
     position: relative;
 
-} */
-/* .hero_img::before{
+}
+.hero_img::before{
     content: "";
     position: absolute;
     bottom: 0px;
@@ -14,7 +14,4 @@
         rgba(225,225,225,)
 
     )
-} */
- .b {
-    height: 10px;
- }
+};
