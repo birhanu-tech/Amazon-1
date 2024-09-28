@@ -7,7 +7,6 @@ import Auth from './pages/auth/Auth';
 import Payment from './pages/payment/Payment';
 import Orders from './pages/orders/Orders';
 import Cart from './pages/cart/Cart';
-import Signup from './pages/auth/Signup';
 import Result from './pages/results/Result';
 import ProductDetail from './pages/productdetail/ProductDetail';
 import { Elements} from "@stripe/react-stripe-js";
