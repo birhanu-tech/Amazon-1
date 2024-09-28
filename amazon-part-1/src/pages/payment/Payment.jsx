@@ -1,5 +1,5 @@
 import React,{useContext , useState} from 'react'
-import classes from "./Payment.module.css"
+import classes from "./payment.module.css"
 import LayOut from '../../componenet/LayOut/LayOut'
 import { DataContext } from '../../componenet/DataProvider/DataProvider'
 import ProductCard from '../../componenet/product/ProductCard'
