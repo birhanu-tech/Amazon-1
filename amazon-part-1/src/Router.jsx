@@ -25,7 +25,6 @@ function Routing() {
     <Router>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="" element={<Signup />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/payments" element={  <ProtectedRoute
               msg={"you must log in to pay"}

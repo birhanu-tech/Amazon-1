@@ -17,7 +17,7 @@ function Header() {
   return (
     <>
       <section className={classes.fixed}>
-        <dev className={classes.hea+der__container}>
+        <dev className={classes.header__container}>
           <div className={classes}>
             {/* logo */}
             <div className={classes.logo__container}>
