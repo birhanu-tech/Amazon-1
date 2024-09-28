@@ -1,5 +1,4 @@
 import React, {useContext} from 'react'
-import "./cart.module.css"
 import LayOut from '../../componenet/LayOut/LayOut'
 import { DataContext } from '../../componenet/DataProvider/DataProvider';
 
@@ -10,7 +9,7 @@ import ProductCard from '../../componenet/product/ProductCard';
 // import CurrencyFormat from "../../Components/CurrencyFormat/CurrencyFormat";
 import CurrencyFormat from '../../componenet/CurrencyFormat/CurrencyFormat';
 import { Link } from "react-router-dom";
-import classes from "./Cart.module.css";
+import classes from "./cart.module.css";
 import { Type } from "../../Utility/action.type";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
