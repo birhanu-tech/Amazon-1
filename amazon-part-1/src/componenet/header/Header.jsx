@@ -6,14 +6,18 @@ import classes from "./header.module.css"
 import { Link } from 'react-router-dom';
 import { DataContext } from '../DataProvider/DataProvider';
 import Lowerheader from './Lowerheader';
+import { auth } from '../../Utility/firebase';
 
 function Header() {
-  const [{basket},dispatch] = useContext(DataContext)
-  console.log(basket)
+  const [{user,basket},dispatch] = useContext(DataContext)
+  // console.log(basket)
+  const totalItem = basket?.reduce((amount, item) => {
+    return item.amount + amount;
+  }, 0);
   return (
     <>
       <section className={classes.fixed}>
-        <dev className={classes.header__container}>
+        <dev className={classes.hea+der__container}>
           <div className={classes}>
             {/* logo */}
             <div className={classes.logo__container}>
@@ -43,7 +47,7 @@ function Header() {
               <option value="">All</option>
             </select>
             <input type="text" name="" id="" placeholder="search product" />
-            <FaSearch size={23} />
+            <FaSearch size={35} />
           </div>
           {/* right side link */}
           <div className={classes.order_container}>
@@ -59,10 +63,19 @@ function Header() {
               </Link>
             </div>
             {/* three component */}
-            <Link to="/auth">
+            <Link to={!user && "/auth"}>
               <div>
-                <p>Sign In</p>
-                <span>Account & Liats</span>
+                {user ? (
+                  <>
+                    <p>hello {user?.email?.split("@")[0]}</p>
+                    <span onClick={() => auth.signOut()}>sign out</span>
+                  </>
+                ) : (
+                  <>
+                    <p>Hello,Sign in</p>
+                    <span>Account & Lists</span>
+                  </>
+                )}
               </div>
             </Link>
             {/* orders */}
@@ -72,7 +85,7 @@ function Header() {
             </Link>
             <Link to="/cart" className={classes.cart}>
               <BiCart size={35} />
-              <span>{basket.length}</span>
+              <span>{totalItem}</span>
             </Link>
           </div>
         </dev>

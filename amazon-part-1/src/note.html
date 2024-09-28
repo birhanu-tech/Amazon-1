@@ -73,7 +73,115 @@ import Cart from './pages/cart/Cart';
 
  consul ninja extention
  npm cache clean --force
+ react spinner
 
-  Git add.
-git commit  -m "first commmrt"
-git push 
+ 
+
+create new repository then copy url then go then creat folder and open vsc then git clone > past url then cd created folder then ls -al then git branch -M main - to connect local pc to git hub copy and paste this url git remote add origin https://github.com/birhanu-tech/amazon-part-2.git then git remote -v then npm create vite@latest amazon-2 git add . git commit -m "first commit" git push -u origin main --> this is only for the first time otherways git push ******************************************************************************************* 
+www.firebase.google.com
+
+go to firebase then build then Authentication then get start then on email and password
+
+************************************************************************************************************
+                        sign in and sign out
+
+-sign in kalne behuala  header lay sign in ke,milew bota lay ye useru sem metsaf alebet so go to header and add user on state 
+-split is string method that split a string into an array of substrings, and returns the new array.
+-split yetetekemnew ke @ befit ena ke @ behuala talewen endileyelen new
+
+ -sign out yemilew click sydereg sign out endiaderg  onclock blen inline yehone handler setup enadergalen so click syderg sign out yemilewen ye firebase method enteralen selezih must import auth >>> exa -- <span onClick={() => auth.signOut()}>sign out</span>
+
+
+function Header() {
+  const [{user,basket},dispatch] = useContext(DataContext)
+
+     <Link to={!user && "/auth"}>
+              <div>
+                {user ? (
+                  <>
+
+                    <p>hello{user?.email?.split("@")[0]}</p>
+                    <span onClick={() => auth.signOut()}>sign out</span>
+                  </>
+                ) : (
+                  <>
+                    <p>Hello,Sign in</p>
+                    <span>Account & Lists</span>
+                  </>
+                )}
+              </div>
+            </Link>
+
+            - go to utility.js inside action.type then type  SET_USER: "SET_USER",
+  EMPTY_BASKET: "EMPTY_BASKET",
+  sign out fanction  endiseralen  le firebase menager becha sayhone statachen abdate madreg selalebens go to app.jsx 
+
+  -import useContext,DataContext,type,auth 
+  
+  function App() {
+  const [{user},dispatch] = useContext(DataContext);
+
+  useEffect(() => {
+    auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        dispatch({
+          type: Type.SET_USER,
+          user: authUser,
+        });
+
+      }else{
+        dispatch({
+          type: Type.SET_USER,
+          user: null,
+        });
+      }
+    });
+  }, []);
+  return (
+********************************************************************************************************
+
+****************************************************************************************************
+                            payment get ways
+stripe payment method 
+first sign in or create stripe account and go to payment  then go to devlopers then api key 
+************************************************************************************************************
+
+************************************************************************************************************
+               payment  handle miaderglen backende
+               
+- go to firebase and  go to project then go to build then go to functions 
+- search firebase tools and read documentation then  open firebase tools npm then copy npm install -g firebase-tools and install in package.json. then check installed type - firebase --version and check is is installed globally or not type - npm list -g  if see error do to window start menu and type env then click edit the system enviroment variables  control panel then click enviroment variables then double click path then make sure the path is correct if not click new and add path then click ok then close it and restart vsc 
+                           be function lemesrat
+-go to terminal and type firebase login then follow the step 
+-firebase init  then click yes then chose - >( ) Functions: Configure a Cloud Functions directory and its files then  click space button to select and click enter  
+then enter  select javascript then 
+ ? Do you want to use ESLint to catch probable bugs and enforce style?  choose no 
+? Do you want to install dependencies with npm now? choose Yes
+then we will see functions folder inside project folder then go to index.js and delet commentd file
+
+
+http://127.0.0.1:5001/n-418ea/us-central1/api
+
+npm run serve  to start server
+npm i express cors dotenv stripe
+code .
+Code Spell Checker extension for VS Code 
+
+
+********************************************************************************************************************
+                                client side payment  functionality
+  
+    // step;  1. backend || functions ---> contact to the client secret ---> axios install adregen backendachenen contact enadergalen client secretachenen lemagegnet 
+    // step;  2. client side (react side confirmation)
+    // step;  3. after the confirmation --> order firestore database save,then  clear basket
+  
+    npm install axios
+   npm run serve  to start server then copy (link ) and set baseurl in axios.js then go to api folder and create axios.js file then  
+   import axios from "axios";
+
+const axiosInstance = axios.create({
+  baseURL: "http://127.0.0.1:5001/n-418ea/us-central1/api",
+});
+export { axiosInstance }
+   named axiosInstance becouse to not confused with  default axios 
+   then impory axiosInstance from axios.js to payment.jsx --> import axiosInstance from "../axios.js";

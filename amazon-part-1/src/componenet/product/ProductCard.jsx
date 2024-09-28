@@ -12,17 +12,21 @@ function ProductCard({ product, flex, renderDesc, renderAdd }) {
   const [state, dispatch] = useContext(DataContext);
 
   const addToCart = () => {
-    dispatch({
-      type: Type.ADD_TO_BASKET,
-      item: {
-        image,
-        title,
-        id,
-        rating,
-        price,
-        description,
-      },
-    });
+    if (image && title && id && rating && price && description) {
+      dispatch({
+        type: Type.ADD_TO_BASKET,
+        item: {
+          image,
+          title,
+          id,
+          rating,
+          price,
+          description,
+        },
+      });
+    } else {
+      console.error("ProductCard: addToCart: missing required props");
+    }
   };
 
   return (
