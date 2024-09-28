@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import classes from "./Sighnup.module.css"
+import classes from "./auth.module.css"
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import LayOut from '../../componenet/LayOut/LayOut';
 import { auth } from '../../Utility/firebase';
