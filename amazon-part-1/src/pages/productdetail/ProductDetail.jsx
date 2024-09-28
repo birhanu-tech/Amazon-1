@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import "./product.module.css"
 import LayOut from '../../componenet/LayOut/LayOut'
 import { useParams } from 'react-router-dom'
 import { productUrl } from '../../Api/endpoints'
