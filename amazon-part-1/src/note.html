@@ -185,3 +185,20 @@ const axiosInstance = axios.create({
 export { axiosInstance }
    named axiosInstance becouse to not confused with  default axios 
    then impory axiosInstance from axios.js to payment.jsx --> import axiosInstance from "../axios.js";
+
+
+   *************************************************************************************************************************
+                                refactoring backend payment api without functions
+                                firebase function santekem endet backend mesrat endemnechel
+  
+create amazone api folder outside of project folder then create index.js create terminal and type npm init -y(lemiteyken teyake yes lamalet new -y yetetekemnew) then --->npm i express cors dotenv stripe---> then function west yalewn index.js copy adregen amazone api kalew index.js paste madreg then delet this two files
+                              const {onRequest} = require("firebase-functions/v2/https");
+                              const logger = require("firebase-functions/logger");
+then change listner from ---> exports.api = onRequest(app); to ---->app.listen(5000, (err)=> {
+                                                if(err) throw err;
+                                                console.log("amazon server running on port: 5000, http://localhost:5000");
+                                            })
+  so start lemadreg go to package json and add start script---> "start": "node index.js" and save   and remove "test":"echo \"Error: no test specified\" && exit 1"  then   type npm start and go to http://localhost:5000
+
+then create .env file and paste STRIPE_KEY= from front end project
+ ******************************************************************************************************************************  
