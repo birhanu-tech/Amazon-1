@@ -38,7 +38,7 @@ function Lowerheader() {
       {/* Hamburger icon */}
       <div className={classes.hamburger} onClick={toggleMenu}>
         <IoMdMenu size={30} />
-        <p>ALL</p>
+        <p>All</p>
       </div>
       {/* Collapsible menu */}
       <ul className={`${classes.menu} ${isMenuOpen ? classes.show : ""}`}>
