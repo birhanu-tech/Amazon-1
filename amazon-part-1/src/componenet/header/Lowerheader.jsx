@@ -35,12 +35,12 @@ function Lowerheader() {
 
   return (
     <div className={classes.lower_container}>
-      {/* Hamburger icon */}
+       {/* Hamburger icon */}
       <div className={classes.hamburger} onClick={toggleMenu}>
         <IoMdMenu size={30} />
         <p>All</p>
       </div>
-      {/* Collapsible menu */}
+
       <ul className={`${classes.menu} ${isMenuOpen ? classes.show : ""}`}>
         <li>Today's deal</li>
         <li>Customer service</li>

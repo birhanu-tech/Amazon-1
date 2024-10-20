@@ -43,7 +43,7 @@ function Header() {
           <div className={classes.search}>
             {/* search */}
 
-            <select name="" id="">
+            <select name="" id="" className={classes.a}>
               <option value="">All</option>
             </select>
             <input type="text" name="" id="" placeholder="search product" />
