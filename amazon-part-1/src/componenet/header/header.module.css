@@ -67,6 +67,7 @@
     border: none;
     /* padding: 11px; */
     
+    
 
 }
 
@@ -236,12 +237,13 @@ margin-right: -2px;
 
 }
 
-
-.search select,
-.search input {
+.search select{
+    border: none;
     padding: 9px;
-    font-weight: bold;
-    outline: 1px solid white;
-    /* border-radius: 10px; */
+    
+    
+
 }
+
+
 }
