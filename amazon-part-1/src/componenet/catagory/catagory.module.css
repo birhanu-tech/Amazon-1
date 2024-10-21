@@ -11,8 +11,8 @@
 .catagory img{
     width: 100%;
     object-fit: contain;
-    /* max-height: 250px; */
-    height: 250px;
+    max-height: 250px;
+    /* height: 250px; */
     padding: 0px 10px;
       object-fit: cover;
 }
@@ -41,6 +41,6 @@ color: rgb(35,35,35);
     gap: 30px;
     place-items: center;
     padding: 0 20px;
-      width: 100%;
+      /* width: 100%; */
       
 }
